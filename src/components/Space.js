@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Children } from "react"
 
 import styled from "styled-components"
 
@@ -14,7 +14,7 @@ const Box = styled.div`
 
 const Space = ({ children, clickHandler, id }) => {
   return (
-    <Box onClick={clickHandler} id={id}>
+    <Box onClick={clickHandler} id={id} style={ children === 'X' ? { color:'red' } : { color:'blue' }}>
       {children}
     </Box>
   )
